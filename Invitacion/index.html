@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRIMARIA OTILIO MONTAÑO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1>LA ESCUELA PRIMARIA OTILIO MONTAÑO<br>TE INVITA</h1>
+
+    <div class="characters">
+      <img src="imageen 1.png" alt="Personaje Izquierda" class="character left" />
+      <img src="imageen 2.png" alt="Personaje Derecha" class="character right" />
+    </div>
+
+    <div class="texto">
+      <p>EL DÍA 8 DE MAYO AL FESTEJO DEL DÍA DE LAS MADRES<br><br>¡¡NO PUEDES FALTAR!!</p>
+    </div>
+
+    <a class="ubicacion-btn" href="https://maps.app.goo.gl/u1tqxT9wTN9vtVN1A" target="_blank">📍 Ver Ubicación</a>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const left = document.querySelector('.character.left');
+      const right = document.querySelector('.character.right');
+
+      if (left) left.style.animation = 'moveInLeft 2s forwards';
+      if (right) right.style.animation = 'moveInRight 2s forwards';
+    });
+  </script>
+</body>
+</html>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
+

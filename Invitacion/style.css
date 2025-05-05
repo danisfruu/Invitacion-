@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+
+.background {
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-top: 30px;
+  animation: fadeInDown 1.5s ease-out;
+}
+
+.characters {
+  position: relative;
+  height: 300px;
+  margin: 30px 0;
+}
+
+.character {
+  position: absolute;
+  width: 200px; /* más grande */
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%); /* alineación vertical */
+}
+
+.character.left {
+  left: -320px;
+  background-image: url('imageen\ 1.png'); /* corregido: sin espacio ni backslash */
+}
+
+.character.right {
+  right: -320px;
+  background-image: url('imageen\ 2.png'); /* corregido: sin espacio ni backslash */
+}
+
+.texto {
+  margin: 40px 0 20px;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ubicacion-btn {
+  display: inline-block;
+  background-color: #ff8000;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ubicacion-btn:hover {
+  background-color: #e56e00;
+  transform: scale(1.05);
+}
+
+.audio-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+@keyframes moveInLeft {
+  from {
+    left: -220px;
+    opacity: 0;
+  }
+  to {
+    left: 20%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveInRight {
+  from {
+    right: -220px;
+    opacity: 0;
+  }
+  to {
+    right: 20%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .character {
+    width: 140px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .texto {
+    font-size: 1em;
+  }
+
+  .ubicacion-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+}
